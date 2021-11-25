@@ -23,19 +23,24 @@ J_{S}
 J_{R}
 \end{bmatrix}
 =
+\boldsymbol{\mathcal{L}}_{\mu}
 \begin{bmatrix}
-0 & \mathcal{L}_{LS,\mu} & \mathcal{L}_{LR,\mu}
-\\
-\mathcal{L}_{SL,\mu} & 0 & \mathcal{L}_{SR,\mu}
-\\
-\mathcal{L}_{RL,\mu} & \mathcal{L}_{RS,\mu} & 0
-\end{bmatrix}
+    \delta\mu_{L}
+    \\
+    \delta\mu_{S}
+    \\
+    \delta\mu_{R}
+    \end{bmatrix}
+\end{align*}
+where $\boldsymbol{\mathcal{L}}_{\mu}$ is the following matrix:
+\begin{align*}\boldsymbol{\mathcal{L}}_{\mu}
+=
 \begin{bmatrix}
-\delta\mu_{L}
+\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu} & -\mathcal{L}_{LS,\mu} & -\mathcal{L}_{LR,\mu}
 \\
-\delta\mu_{S}
+-\mathcal{L}_{SL,\mu} & \mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu} & -\mathcal{L}_{SR,\mu}
 \\
-\delta\mu_{R}
+-\mathcal{L}_{RL,\mu} & -\mathcal{L}_{RS,\mu} & \mathcal{L}_{RL,\mu}+\mathcal{L}_{RS,\mu}
 \end{bmatrix}
 \end{align*}
 where we assuming the isothermal condition, which is stated in the paper. In addition, the diagonal terms are zero since the summation is over different indexed as shown in Eq. [1] of the paper.
