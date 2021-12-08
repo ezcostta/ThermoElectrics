@@ -585,4 +585,99 @@ which allows us to express the coefficients in terms of the resistances, which m
 \begin{align}\label{LLR:exp}
 \mathcal{L}_{LR,\mu}=\dfrac{R_{RS,LS}}{eD_{R}}
 \end{align}
+
+\section{Some relations among coefficients}
+We start from Eq.(2) of the paper which may be expressed in a matricial form:
+\begin{multline*}
+\begin{bmatrix}
+J_{L}
+\\
+J_{S}
+\\
+J_{R}
+\end{bmatrix}
+\\=
+\begin{bmatrix}
+\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu} & -\mathcal{L}_{LS,\mu} & -\mathcal{L}_{LR,\mu}
+\\
+-\mathcal{L}_{SL,\mu} & \mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu} & -\mathcal{L}_{SR,\mu}
+\\
+-\mathcal{L}_{RL,\mu} & -\mathcal{L}_{RS,\mu} & \mathcal{L}_{RL,\mu}+\mathcal{L}_{RS,\mu}
+\end{bmatrix}
+\begin{bmatrix}
+\delta\mu_{L}
+\\
+\delta\mu_{S}
+\\
+\delta\mu_{R}
+\end{bmatrix}.
+\end{multline*}
+
+The authors suggest the use of the condition $J_{L}+J_{S}+J_{R}=0$. We can write the three currents as a linear combination of the chemical potential and, since these potentials are linearly independent, we must have the three following conditions:
+\begin{align*}
+\vermelho{\mathcal{L}_{LS,\mu}}+\vermelho{\mathcal{L}_{LR,\mu}}
+&=
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu}
+\\
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}
+&=
+\vermelho{\mathcal{L}_{LS,\mu}}+\vermelho{\mathcal{L}_{RS,\mu}}
+\\
+\mathcal{L}_{RL,\mu}+\vermelho{\mathcal{L}_{RS,\mu}}
+&=
+\vermelho{\mathcal{L}_{LR,\mu}}+\mathcal{L}_{SR,\mu}
+\end{align*}
+which may be written as follows:
+\begin{align*}
+\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu}
+&=
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu}
+\\
+\mathcal{L}_{LS,\mu}+\mathcal{L}_{RS,\mu}
+&=
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}
+\\
+-\mathcal{L}_{LR,\mu}+\mathcal{L}_{RS,\mu}
+&=
+\mathcal{L}_{SR,\mu}-\mathcal{L}_{RL,\mu}
+\end{align*}
+and we see only two equations are independent. In this way, we eliminate two coefficients $\mathcal{L}_{LS,\mu}$ and $\mathcal{L}_{RS,\mu}$ which are written as, 
+\begin{align*}
+\mathcal{L}_{LR,\mu}
+&=
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu}-\mathcal{L}_{LS,\mu}
+\end{align*}
+and
+\begin{align*}
+\mathcal{L}_{RS,\mu}
+&=
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}-\mathcal{L}_{LS,\mu}
+\end{align*}
+
+By substituting these two matrix elements back into $\boldsymbol{\mathcal{L}}_{\mu}$ we have:
+\begin{widetext}
+\begin{align*}
+\boldsymbol{\mathcal{L}}_{\mu}=
+\begin{bmatrix}
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu} 
+& 
+-\mathcal{L}_{LS,\mu} 
+& 
+-(\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu}-\mathcal{L}_{LS,\mu})
+\\
+-\mathcal{L}_{SL,\mu} 
+&
+\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu} 
+&
+-\mathcal{L}_{SR,\mu}
+\\
+-\mathcal{L}_{RL,\mu} 
+& 
+-(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}-\mathcal{L}_{LS,\mu})
+& 
+\mathcal{L}_{RL,\mu}+\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}-\mathcal{L}_{LS,\mu}
+\end{bmatrix}
+\end{align*}
+\end{widetext}
+~
 \clearpage
