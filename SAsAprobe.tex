@@ -1,0 +1,218 @@
+\section{Using $S$ as a probe}
+
+Let's use Eq. (2) along with the assumption the $S$ leads is a probe. In this case, we have:
+\begin{align}\label{JL}
+J_{L}&=
+(\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu} )\delta\mu_{L}
+-\mathcal{L}_{LS,\mu}\delta\mu_{S}
+-\mathcal{L}_{LR,\mu}\delta\mu_{R}
+\\\label{JS}
+J_{S}&=
+-\mathcal{L}_{SL,\mu}\delta\mu_{L}
++
+(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})\delta\mu_{S}
+-
+\mathcal{L}_{SR,\mu}\delta\mu_{R}
+\\\label{JR}
+J_{R}&= 
+-\mathcal{L}_{RL,\mu}\delta\mu_{L} 
+-\mathcal{L}_{RS,\mu}\delta\mu_{S}
++
+(\mathcal{L}_{RL,\mu}+\mathcal{L}_{RS,\mu})\delta\mu_{R}
+\end{align}
+
+by using the condition $J_{S}=0$, the superconductor lead as a probe, then we can eliminate $\delta\mu_{S}$ from the equations above. In fact, from the second equation we have:
+\begin{align*}
+J_{S}&=0=
+-\mathcal{L}_{SL,\mu}\delta\mu_{L}
++
+(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})\delta\mu_{S}
+-
+\mathcal{L}_{SR,\mu}\delta\mu_{R}
+\end{align*}
+which allows us to write:
+\begin{align}\label{delta:muS}
+\delta\mu_{S}
+=
+\dfrac{\mathcal{L}_{SL,\mu}\delta\mu_{L}+\mathcal{L}_{SR,\mu}\delta\mu_{R}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}
+\end{align}
+\begin{widetext}
+and by plugging this into Eqs. for $J_{L}$ and $J_{R}$, we have:
+\begin{align*}
+J_{L}&=
+(\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu})\delta\mu_{L}
+-\mathcal{L}_{LS,\mu}\left[\dfrac{\mathcal{L}_{SL,\mu}\delta\mu_{L}+\mathcal{L}_{SR,\mu}\delta\mu_{R}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]
+-\mathcal{L}_{LR,\mu}\delta\mu_{R}
+\end{align*}
+which leads to
+\begin{align*}
+J_{L}&=
+\dfrac{(\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu})(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{L}
+-
+\dfrac{\mathcal{L}_{LS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{L}
+-
+\dfrac{\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{R}
+-
+\mathcal{L}_{LR,\mu}\delta\mu_{R}
+\end{align*}
+which leads to
+\begin{align*}
+J_{L}&=
+\dfrac{(\mathcal{L}_{LS,\mu}+\mathcal{L}_{LR,\mu})(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})-\mathcal{L}_{LS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{L}
+-\left[
+\dfrac{\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{LR,\mu}(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{R}
+\right]
+\end{align*}
+\begin{multline*}
+J_{L}=
+\dfrac{\mathcal{L}_{LS,\mu}\mathcal{L}_{SL,\mu}
++
+\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}
++
+\mathcal{L}_{LR,\mu}\mathcal{L}_{SL,\mu}
++
+\mathcal{L}_{LR,\mu}\mathcal{L}_{SR,\mu}-\mathcal{L}_{LS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{L}
+\\-\left[
+\dfrac{\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{LR,\mu}(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}
+\right]\delta\mu_{R}
+\end{multline*}
+and performing some simplifications, we have:
+\begin{align*}
+J_{L}=
+\dfrac{
+\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}
++
+\mathcal{L}_{LR,\mu}\mathcal{L}_{SL,\mu}
++
+\mathcal{L}_{LR,\mu}\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{L}
+-\left[
+\dfrac{\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{LR,\mu}\mathcal{L}_{SL,\mu}+\mathcal{L}_{LR,\mu}\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}
+\right]\delta\mu_{R}
+\end{align*} 
+and by defining, 
+\begin{align*}
+D_{L}=\mathcal{L}_{LS,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{LR,\mu}\mathcal{L}_{SL,\mu}+\mathcal{L}_{LR,\mu}\mathcal{L}_{SR,\mu}
+\end{align*}
+\end{widetext}
+we can write the equation above as:
+\begin{align*}
+J_{L}=\dfrac{D_{L}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}(\delta\mu_{L}-\delta\mu_{R})
+\end{align*}
+which can be put into the form:
+\begin{align*}
+J_{L}=\dfrac{D_{L}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\Delta\mu_{LR}
+\end{align*}
+which leads to:
+\begin{align}\label{Delta:mu:LR}
+\Delta\mu_{LR}=\dfrac{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}{D_{L}}J_{LR}.
+\end{align} 
+where $J_{LR}=J_{L}=-J_{R}$ from the paper. We notice that  Eq. \eqref{Delta:mu:LR} corresponds to Eq. (B1) from the paper (we must assume the time-reversal symmetry so the coefficient are symetric under exchanging of index).
+
+The other equations in (B1) are determined by using Eq. \eqref{Delta:mu:LR}
+
+We should obtain the same result if we substitute Eq. \eqref{delta:muS} into Eq. \eqref{JR} \footnote{Indee let's substitute Eq. \eqref{delta:muS} into Eq. \eqref{JR}:
+\begin{align*}
+J_{R}&= 
+-\mathcal{L}_{RL,\mu}\delta\mu_{L} 
+-\mathcal{L}_{RS,\mu}\left[\dfrac{\mathcal{L}_{SL,\mu}\delta\mu_{L}+\mathcal{L}_{SR,\mu}\delta\mu_{R}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]
++
+(\mathcal{L}_{RL,\mu}+\mathcal{L}_{RS,\mu})\delta\mu_{R}
+\end{align*}
+
+\begin{align*}
+J_{R}&= 
+-\mathcal{L}_{RL,\mu}\delta\mu_{L} 
+-
+\dfrac{\mathcal{L}_{RS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{L}
+-
+\dfrac{\mathcal{L}_{RS,\mu}\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\delta\mu_{R}
++
+(\mathcal{L}_{RL,\mu}+\mathcal{L}_{RS,\mu})\delta\mu_{R}
+\end{align*}
+\begin{multline*}
+J_{R}= 
+-\left[
+\dfrac{\mathcal{L}_{RL,\mu}(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})+\mathcal{L}_{RS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]\delta\mu_{L}
+\\+\left[
+\dfrac{-\mathcal{L}_{RS,\mu}\mathcal{L}_{SR,\mu}+(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})(\mathcal{L}_{RL,\mu}+\mathcal{L}_{RS,\mu})}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]\delta\mu_{R}
+\end{multline*}
+
+\begin{multline*}
+J_{R}= 
+-\left[
+\dfrac{\mathcal{L}_{RL,\mu}\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{RS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]\delta\mu_{L}
+\\+\left[
+\dfrac{-\mathcal{L}_{RS,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{SL,\mu}\mathcal{L}_{RL,\mu}
++\mathcal{L}_{SL,\mu}\mathcal{L}_{RS,\mu}
++\mathcal{L}_{SR,\mu}\mathcal{L}_{RL,\mu}
++\mathcal{L}_{SR,\mu}\mathcal{L}_{RS,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]\delta\mu_{R}
+\end{multline*}
+
+\begin{multline*}
+J_{R}= 
+-\left[
+\dfrac{\mathcal{L}_{RL,\mu}\mathcal{L}_{SL,\mu}+\mathcal{L}_{RL,\mu}\mathcal{L}_{SR,\mu}+\mathcal{L}_{RS,\mu}\mathcal{L}_{SL,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]\delta\mu_{L}
+\\+\left[
+\dfrac{
+\mathcal{L}_{SL,\mu}\mathcal{L}_{RL,\mu}
++\mathcal{L}_{SL,\mu}\mathcal{L}_{RS,\mu}
++\mathcal{L}_{SR,\mu}\mathcal{L}_{RL,\mu}
+}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\right]\delta\mu_{R}
+\end{multline*}
+and by using the definition of $D_{L}$ we have:
+\begin{align*}
+J_{R}=\dfrac{D_{L}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}(-\delta\mu_{L}+\delta\mu_{R})=-\dfrac{D_{L}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\Delta\mu_{LR}
+\end{align*}
+which leads to:
+\begin{align*}
+\Delta\mu_{LR}=\dfrac{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}{D_{L}}J_{LR}
+\end{align*} which is indeed Eq. \eqref{Delta:mu:LR}.}. Next, we calculate:
+\begin{align*}
+\Delta\mu_{LS}&=\delta\mu_{L}-\delta\mu_{S}
+=
+\delta\mu_{L}-\dfrac{\mathcal{L}_{SL,\mu}\delta\mu_{L}+\mathcal{L}_{SR,\mu}\delta\mu_{R}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}
+\\
+&=\delta\mu_{L}\dfrac{(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}-\dfrac{\mathcal{L}_{SL,\mu}\delta\mu_{L}+\mathcal{L}_{SR,\mu}\delta\mu_{R}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}
+\end{align*}
+which leads to
+\begin{align*}
+\Delta\mu_{LS}
+&=\dfrac{\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}(\delta\mu_{L}-\delta\mu_{R})
+\end{align*}
+then, we have:
+\begin{align}\label{Delta:mu:LS:intermed}
+\Delta\mu_{LS}
+&=\dfrac{\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\Delta\mu_{LR}.
+\end{align}
+
+By substituting Eq. \eqref{Delta:mu:LR} into Eq. \eqref{Delta:mu:LS:intermed} we obtain:
+\begin{align}\label{Delta:mu:LS:intermed}
+\Delta\mu_{LS}
+&=\dfrac{\mathcal{L}_{SR,\mu}}{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}\dfrac{\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu}}{D_{L}}J_{LR},
+\end{align}
+which leads to
+\begin{align}\label{Delta:mu:LS}
+\Delta\mu_{LS}
+&=\dfrac{\mathcal{L}_{SR,\mu}}{D_{L}}J_{LR}.
+\end{align}
+
+Next, we calculate $\Delta\mu_{RS}$ as follows:
+\begin{align*}
+\Delta\mu_{RS}=\delta\mu_{R}-\delta\mu_{S}
+=
+\delta\mu_{R}-\delta\mu_{L}+\delta\mu_{L}-\delta\mu_{S}
+=
+-\Delta\mu_{LR}+\Delta\mu_{LS}
+\end{align*}
+and by using \eqref{Delta:mu:LR} and \eqref{Delta:mu:LS} we obtain:
+\begin{align*}
+\Delta\mu_{RS}
+=
+-\dfrac{(\mathcal{L}_{SL,\mu}+\mathcal{L}_{SR,\mu})}{D_{L}}J_{LR}+\dfrac{\mathcal{L}_{SR,\mu}}{D_{L}}J_{LR}
+\end{align*}
+which leads to 
+\begin{align}\label{Delta:mu:RS}
+\Delta\mu_{RS}
+=
+-\dfrac{\mathcal{L}_{SL,\mu}}{D_{L}}J_{LR}.
+\end{align}
