@@ -1,15 +1,581 @@
 \section{Appendix C}
 
-Let's start from Eq. (9) from the paper. 
+Let's start from Eq. (9) from the paper, 
 \begin{multline}\label{current}
 J_{L}
 =
-\dfrac{2e}{\hbar}\int dE~\mathcal{T}^{ET}(E)[f_{L}(E)-f_{R}(E)]
+\dfrac{2e}{h}\int dE~\mathcal{T}^{ET}(E)[f_{L}(E)-f_{R}(E)]
 +
-\dfrac{2e}{\hbar}\int dE~\mathcal{T}^{DAR}(E)[f_{L}(E)-\tilde{f}_{L}(E)]
+\dfrac{2e}{h}\int dE~\mathcal{T}^{DAR}(E)[f_{L}(E)-\tilde{f}_{L}(E)]
 \\+
-\dfrac{2e}{\hbar}\int dE~\mathcal{T}^{CAR}(E)[f_{L}(E)-\tilde{f}_{R}(E)]
+\dfrac{2e}{h}\int dE~\mathcal{T}^{CAR}(E)[f_{L}(E)-\tilde{f}_{R}(E)]
 +
-\dfrac{2e}{\hbar}\int dE~\mathcal{T}^{QP}(E)[f_{L}(E)-f_{S}(E)]
+\dfrac{2e}{h}\int dE~\mathcal{T}^{QP}(E)[f_{L}(E)-f_{S}(E)]
 \end{multline}
 where we have used the definitions of Fermi-Dirac distributions functions: $f_{\alpha}=\{\exp[(E-\mu_{\alpha})/k_{B}T_{\alpha}]+1\}^{-1}$ and $\tilde{f}_{\alpha}=1-f_{\alpha}(-E)=\{\exp[(E+\mu_{\alpha})/k_{B}T_{\alpha}]+1\}^{-1}$ for electrons and holes, respectively.
+
+
+\subsection{Derivation of thermoelectric properties}
+
+
+Let's assume a general Fermi function for a given lead $\alpha$ characterized by a local chemical potential $\mu_{\alpha}$ and temperature $T_{\alpha}$ such that the corresponding equilibrium quantities are $\mu$ and $T$. In this case the differences between these quantities are expressed as
+\begin{align*}
+\delta\mu_{\alpha}&=\mu_{\alpha}-\mu
+\\
+\delta T_{\alpha}&=T_{\alpha}-T
+\end{align*}
+where $\theta_{\alpha}$ and $V_{\alpha}$ are temperature and voltage biases applied to the lead. The Fermi function is then given by:
+\begin{align*}
+f_{\alpha}=\left\{1+\exp\left[\dfrac{E-\mu_{\alpha}}{k_{B}T_{\alpha}}\right]\right\}^{-1},
+\end{align*}
+such that
+\begin{align*}
+f_{0}=\left\{1+\exp\left[\dfrac{E-\mu}{k_{B}T}\right]\right\}^{-1}.
+\end{align*}
+
+Before proceeding to the explicit expansion of the Fermi function, let's consider first some derivatives to be used in further calculations. For simplicity, we define:
+\begin{align*}
+x=\dfrac{E-\mu_{\alpha}}{k_{B}T_{\alpha}},
+\end{align*}
+
+\begin{align*}
+\dfrac{\partial f_{\alpha}}{\partial \mu_{\alpha}}=\dfrac{\partial f_{\alpha}}{\partial x}\dfrac{\partial x}{\partial\mu_{\alpha}}=-\dfrac{1}{k_{B}T_{\alpha}}\dfrac{\partial f_{\alpha}}{\partial x},
+\end{align*}
+
+\begin{align*}
+\dfrac{\partial f_{\alpha}}{\partial T_{\alpha}}=\dfrac{\partial f_{\alpha}}{\partial x}\dfrac{\partial x}{\partial T_{\alpha}}=-\dfrac{(E-\mu_{\alpha})}{k_{B}T^{2}_{\alpha}}\dfrac{\partial f_{\alpha}}{\partial x},
+\end{align*}
+and
+\begin{align*}
+\dfrac{\partial f_{\alpha}}{\partial E}=\dfrac{\partial f_{\alpha}}{\partial x}\dfrac{\partial x}{\partial E}=\dfrac{1}{k_{B}T_{\alpha}}\dfrac{\partial f_{\alpha}}{\partial x}
+\end{align*}
+
+The first two derivatives may expressed in terms of the last one as follows:
+\begin{align}\label{first}
+\dfrac{\partial f_{\alpha}}{\partial \mu_{\alpha}}=-\dfrac{\partial f_{\alpha}}{\partial E}
+\end{align}
+and
+\begin{align}\label{second}
+\dfrac{\partial f_{\alpha}}{\partial T_{\alpha}}=-\dfrac{(E-\mu_{\alpha})}{T_{\alpha}}\dfrac{\partial f_{\alpha}}{\partial E}.
+\end{align}
+
+A similar calculation may be done for the hole Fermi function, $\tilde{f}_{\alpha}$, i.e., 
+\begin{align}\label{third}
+\dfrac{\partial \tilde{f}_{\alpha}}{\partial \mu_{\alpha}}=+\dfrac{\partial \tilde{f}_{\alpha}}{\partial E}
+\end{align}
+and
+\begin{align}\label{fourth}
+\dfrac{\partial\tilde{f}_{\alpha}}{\partial T_{\alpha}}=-\dfrac{(E+\mu_{\alpha})}{T_{\alpha}}\dfrac{\partial \tilde{f}_{\alpha}}{\partial E}.
+\end{align}
+
+\subsection{Expanding the Fermi function}
+
+We consider the expansion up to the first terms:
+\begin{align*}
+f_{\alpha}=f_{0}+\left.\dfrac{\partial f_{\alpha}}{\partial\mu_{\alpha}}\right]_{\mu_{\alpha}=\mu}(\mu_{\alpha}-\mu)
++
+\left.\dfrac{\partial f_{\alpha}}{\partial T_{\alpha}}\right]_{T_{\alpha}=T}(T_{\alpha}-T)
+\end{align*}
+which can be written as follows,
+\begin{align*}
+f_{\alpha}=f_{0}-\dfrac{\partial f_{0}}{\partial E}(\mu_{\alpha}-\mu)
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}(T_{\alpha}-T)
+\end{align*}
+
+\begin{align*}
+f_{\alpha}=f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{\alpha}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{\alpha}.
+\end{align*}
+
+A similar expansion may be done for the hole Fermi function:
+\begin{align*}
+\tilde{f}_{\alpha}=f_{0}+\dfrac{\partial f_{0}}{\partial E}\delta\mu_{\alpha}
+-
+\dfrac{(E+\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{\alpha}.
+\end{align*}
+
+\subsection{Expanding the current}
+By using these expansions on the fermi functinons, Eq. \eqref{current} may be expressed as follows:
+\begin{multline}\label{current2}
+J_{L}
+=
+\dfrac{2e}{h}\int dE~\mathcal{T}^{ET}(E)
+\left[
+f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{L}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{L}
+-\left(f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{R}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{R}\right)
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{DAR}(E)
+\left[
+f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{L}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{L}
+-\left(f_{0}+\dfrac{\partial f_{0}}{\partial E}\delta\mu_{L}
+-
+\dfrac{(E+\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{L}\right)
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{CAR}(E)\left[
+f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{L}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{L}
+-\left(f_{0}+\dfrac{\partial f_{0}}{\partial E}\delta\mu_{R}
+-
+\dfrac{(E+\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{R}\right)
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{QP}(E)\left[
+f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{L}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{L}
+-\left(f_{0}-\dfrac{\partial f_{0}}{\partial E}\delta\mu_{S}
+-
+\dfrac{(E-\mu)}{T}\dfrac{\partial f_{0}}{\partial E}\delta T_{S}\right)
+\right]
+\end{multline}
+which leads to
+\begin{multline}\label{current3}
+J_{L}
+=
+\dfrac{2e}{h}\int dE~\mathcal{T}^{ET}(E)
+\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}-\delta\mu_{R})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{DAR}(E)
+\left[
+2\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta\mu_{L}
+-2
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta T_{L}
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{CAR}(E)\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}+\delta\mu_{R})
++
+\dfrac{E}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+-
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}+\delta T_{R})
+\right]
+\\+\dfrac{2e}{h}\int dE~\mathcal{T}^{QP}(E)
+\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}-\delta\mu_{S})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{S})
+\right].
+\end{multline}
+
+We rewrite the term corresponding to the $CAR$ in a different way, in order to make the definitions easier to understand, thus we have:
+\begin{multline*}
+J_{L}
+=
+\dfrac{2e}{h}\int dE~\mathcal{T}^{ET}(E)
+\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}-\delta\mu_{R})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{DAR}(E)
+\left[
+2\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta\mu_{L}
+-2
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta T_{L}
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{CAR}(E)\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}+\delta\mu_{R})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+\right.\\\left.+
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+-
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}+\delta T_{R})
+\right]
+\\+\dfrac{2e}{h}\int dE~\mathcal{T}^{QP}(E)
+\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}-\delta\mu_{S})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{S})
+\right],
+\end{multline*}
+which may be simplified to the form:
+\begin{multline}\label{current6}
+J_{L}
+=
+\dfrac{2e}{h}\int dE~\mathcal{T}^{ET}(E)
+\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}-\delta\mu_{R})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{DAR}(E)
+\left[
+2\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta\mu_{L}
+-2
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta T_{L}
+\right]
+\\+
+\dfrac{2e}{h}\int dE~\mathcal{T}^{CAR}(E)\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}+\delta\mu_{R})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{R})
+\right.\\\left.-2
+\dfrac{\mu}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)\delta T_{R}
+\right]
+\\+\dfrac{2e}{h}\int dE~\mathcal{T}^{QP}(E)
+\left[
+\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta\mu_{L}-\delta\mu_{S})
++
+\dfrac{(E-\mu)}{T}\left(-\dfrac{\partial f_{0}}{\partial E}\right)(\delta T_{L}-\delta T_{S})
+\right],
+\end{multline}
+
+
+
+In order to further simplify the above expression, we use the following definitions:
+\begin{align}\label{L:chemical}
+\mathcal{L}_{\alpha\beta,\mu}^{\kappa}&=\dfrac{2e}{h}\int dE~\mathcal{T}^{\kappa}(E)
+\left(-\dfrac{\partial f_{0}}{\partial E}\right),
+\\\label{L:temperature}
+\mathcal{L}_{\alpha\beta,T}^{\kappa}&=\dfrac{2e}{h}\int dE~\dfrac{(E-\mu)}{T}\mathcal{T}^{\kappa}(E)
+\left(-\dfrac{\partial f_{0}}{\partial E}\right),
+\end{align}
+with $\alpha,\beta=\{L,R,S\}$ and $\kappa=\{QP,ET,CAR,DAR\}$.
+
+By using Eqs. \eqref{L:chemical} and \eqref{L:temperature} into Eq. \eqref{current6}, we obtain:
+\begin{multline*}
+J_{L}=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})
++
+\mathcal{L}_{LR,T}^{ET}(\delta T_{L}-\delta T_{R})
++
+2\mathcal{L}_{LL,\mu}^{DAR}\left(\delta\mu_{L}-\dfrac{\mu}{T}\delta T_{L}\right)
++
+\mathcal{L}_{LR,\mu}^{CAR}(\delta\mu_{L}+\delta\mu_{R})
+\\
++
+\mathcal{L}_{LR,T}^{CAR}(\delta T_{L}-\delta T_{R})
+-
+2\dfrac{\mu}{T}\mathcal{L}_{LR,\mu}^{CAR}\delta T_{R}
++
+\mathcal{L}^{QP}_{LS,\mu}(\delta\mu_{L}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{LS,T}(\delta T_{L}-\delta T_{S})
+\end{multline*}
+which leads to
+\begin{multline*}
+J_{L}=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})
++
+\mathcal{L}_{LR,T}^{ET}(\delta T_{L}-\delta T_{R})
++
+2\mathcal{L}_{LL,\mu}^{DAR}\left(\delta\mu_{L}-\dfrac{\mu}{T}\delta T_{L}\right)
+\\+
+\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}-\dfrac{\mu}{T}\delta T_{R}+\delta\mu_{R}-\dfrac{\mu}{T}\delta T_{R}\right)
++
+\mathcal{L}_{LR,T}^{CAR}(\delta T_{L}-\delta T_{R})
+\\+
+\mathcal{L}^{QP}_{LS,\mu}(\delta\mu_{L}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{LS,T}(\delta T_{L}-\delta T_{S}),
+\end{multline*}
+and by grouping similar terms, we obtain:
+\begin{multline}\label{JL:general}
+J_{L}=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})
++
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})(\delta T_{L}-\delta T_{R})
++
+2\mathcal{L}_{LL,\mu}^{DAR}\left(\delta\mu_{L}-\dfrac{\mu}{T}\delta T_{L}\right)
+\\+
+\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}-\dfrac{\mu}{T}\delta T_{R}+\delta\mu_{R}-\dfrac{\mu}{T}\delta T_{R}\right)
+\\+
+\mathcal{L}^{QP}_{LS,\mu}(\delta\mu_{L}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{LS,T}(\delta T_{L}-\delta T_{S}).
+\end{multline}
+
+\subsection{Setting the reference chemical potencial to zero: $\mu=0$}
+
+By using the chemical potencial reference to zero, we obtain a simplified version of Eq. \eqref{JL:general}. In this way, we have:
+\begin{multline}\label{JL:general:new}
+J_{L}=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})+
+\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}+\delta\mu_{R}\right)
++
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})(\delta T_{L}-\delta T_{R})
++
+2\mathcal{L}_{LL,\mu}^{DAR}\delta\mu_{L}
+\\+
+\mathcal{L}^{QP}_{LS,\mu}(\delta\mu_{L}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{LS,T}(\delta T_{L}-\delta T_{S}).
+\end{multline}
+where we have definitions, 
+\begin{align}\label{L:chemical:new}
+\mathcal{L}_{\alpha\beta,\mu}^{\kappa}&=\dfrac{2e}{h}\int dE~\mathcal{T}^{\kappa}(E)
+\left(-\dfrac{\partial f_{0}}{\partial E}\right),
+\\\label{L:temperature:new}
+\mathcal{L}_{\alpha\beta,T}^{\kappa}&=\dfrac{2e}{hT}\int dE~E\mathcal{T}^{\kappa}(E)
+\left(-\dfrac{\partial f_{0}}{\partial E}\right).
+\end{align}
+
+We also have the current from the right lead which is obtained by performing the exchange $L\leftrightarrow R$ in Eq. \eqref{JL:general:new}. In this way, we have:
+\begin{multline}\label{JR:general}
+J_{R}=
+\mathcal{L}_{RL,\mu}^{ET}(\delta\mu_{R}-\delta\mu_{L})+
+\mathcal{L}_{RL,\mu}^{CAR}\left(\delta\mu_{R}+\delta\mu_{L}\right)
++
+(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})(\delta T_{R}-\delta T_{L})
++
+2\mathcal{L}_{RR,\mu}^{DAR}\delta\mu_{R}
+\\+
+\mathcal{L}^{QP}_{RS,\mu}(\delta\mu_{R}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{RS,T}(\delta T_{R}-\delta T_{S}).
+\end{multline}
+
+We can also determine the current flowing into the $S$ lead by using current conservation: $J_{S}=-J_{L}-J_{R}$ which leads to: 
+\begin{multline}\label{JS:general}
+-J_{S}=
+2\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}+\delta\mu_{R}\right)
++
+2\mathcal{L}_{LL,\mu}^{DAR}\delta\mu_{L}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\delta\mu_{R}
+\\+
+\mathcal{L}^{QP}_{LS,\mu}(\delta\mu_{L}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{LS,T}(\delta T_{L}-\delta T_{S})
++
+\mathcal{L}^{QP}_{RS,\mu}(\delta\mu_{R}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{RS,T}(\delta T_{R}-\delta T_{S}).
+\end{multline}
+
+\subsection{Reproducing the equations of appendix C}
+
+We consider the scenario in which the $L$ lead will be the voltage probe under isothermal conditions. In addition, we also set the voltage at $S$ equal to zero, $\delta\mu_{S}=0$. In this way, by using Eq. \eqref{JL:general:new}, we have:
+\begin{align*}
+0=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})+
+\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}+\delta\mu_{R}\right)
++
+2\mathcal{L}_{LL,\mu}^{DAR}\delta\mu_{L}
++
+\mathcal{L}^{QP}_{LS,\mu}\delta\mu_{L}
+\end{align*}
+which leads to
+\begin{align*}
+0=
+(\mathcal{L}_{LR,\mu}^{CAR}-\mathcal{L}_{LR,\mu}^{ET})\delta\mu_{R}+
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{LS,\mu})\delta\mu_{L}
+\end{align*}
+thus, 
+\begin{align}\label{delta:mRmL}
+\delta\mu_{R}=\dfrac{(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{LS,\mu})}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\delta\mu_{L}.
+\end{align}
+
+
+In order to derive Eq. (C1), we use the isothermal version of Eq. \eqref{JR:general}
+\begin{align*}
+J_{R}=J_{RS}=
+(-\mathcal{L}_{RL,\mu}^{ET}+
+\mathcal{L}_{RL,\mu}^{CAR})\delta\mu_{L}
++
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu})\delta\mu_{R}
+\end{align*}
+and by substituting Eq. \eqref{delta:mRmL} we have:
+\begin{multline*}
+J_{RS}=
+(-\mathcal{L}_{RL,\mu}^{ET}+
+\mathcal{L}_{RL,\mu}^{CAR})\delta\mu_{L}
+\\+
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu})\dfrac{(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{LS,\mu})}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\delta\mu_{L}
+\end{multline*}
+which leads to 
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+(-\mathcal{L}_{RL,\mu}^{ET}+
+\mathcal{L}_{RL,\mu}^{CAR})(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})
+\\+
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu})(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{LS,\mu})
+\end{multline*}
+and by using the symmetry properties, we can further simplify the equation above
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+-(\mathcal{L}_{LR,\mu}^{ET}-
+\mathcal{L}_{LR,\mu}^{CAR})^{2}
+\\+
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu})(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{LS,\mu})
+\end{multline*}
+
+
+
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+-(\mathcal{L}_{LR,\mu}^{ET}-
+\mathcal{L}_{LR,\mu}^{CAR})^{2}
++
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})^{2}
++
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
+(2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+\\+
+(2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
++
+(2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+\end{multline*}
+
+
+
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+4\mathcal{L}_{LR,\mu}^{ET}\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{ET}+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{CAR}
++
+\mathcal{L}^{QP}_{LS,\mu}\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}^{QP}_{LS,\mu}\mathcal{L}_{LR,\mu}^{CAR}
+\\+
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}_{LR,\mu}^{ET}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{CAR}+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}_{LR,\mu}^{CAR}
+\\+
+4\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}^{QP}_{LS,\mu}
+\end{multline*}
+and performing the multiplications, we have:
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+4\mathcal{L}_{LR,\mu}^{ET}\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{ET}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{CAR}
++
+\mathcal{L}^{QP}_{LS,\mu}\mathcal{L}_{LR,\mu}^{ET}
++
+\mathcal{L}^{QP}_{LS,\mu}\mathcal{L}_{LR,\mu}^{CAR}
+\\+
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{ET}
++
+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}_{LR,\mu}^{ET}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}_{LR,\mu}^{CAR}
++
+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}_{LR,\mu}^{CAR}
+\\+
+4\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}
++
+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}^{QP}_{LS,\mu}.
+\end{multline*}
+
+Here we can group some terms as follows:
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+\mathcal{L}_{LR,\mu}^{ET}(4\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})
+\\+
+\mathcal{L}_{LR,\mu}^{CAR}(2\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})
+\\+
+4\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}
++
+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}^{QP}_{LS,\mu}.
+\end{multline*}
+or,
+\begin{multline}\label{intermed:eq1}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+\mathcal{L}_{LR,\mu}^{ET}(4\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{RR,\mu}^{DAR})
++
+\mathcal{L}_{LR,\mu}^{CAR}(2\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{RR,\mu}^{DAR})
++
+4\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}
+\\+
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}
++(\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})+
+\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}^{QP}_{LS,\mu}.
+\end{multline}
+
+
+In order to comply with the definitions appearing on the paper, we define:
+\begin{multline}\label{D:def}
+D=
+\mathcal{L}_{LR,\mu}^{ET}(2\mathcal{L}_{LR,\mu}^{CAR}
++
+\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}_{RR,\mu}^{DAR})
++
+\mathcal{L}_{LR,\mu}^{CAR}(\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}_{RR,\mu}^{DAR})
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}
+\\+
+\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
++
+\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}
++
+\dfrac{1}{2}(\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
++
+\dfrac{1}{2}\mathcal{L}^{QP}_{RS,\mu}\mathcal{L}^{QP}_{LS,\mu}.
+\end{multline}
+
+with this definition, we can rewrite Eq. \eqref{intermed:eq1} as follows:
+\begin{align}
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\dfrac{J_{RS}}{\delta\mu_{L}}=
+2D
+\end{align}
+which leads to
+\begin{align}\label{R:RS:LS:intermed}
+\dfrac{\delta\mu_{L}}{eJ_{RS}}=\dfrac{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}{2eD}.
+\end{align}
+
+Now, by considering $\delta\mu_{S}=0$, we can write:
+\begin{align*}
+\delta\mu_{L}=\delta\mu_{L}-\delta\mu_{S}=\Delta\mu_{LS}.
+\end{align*}
+
+Next, we can write:
+\begin{align}\label{R:RS:LS:intermed}
+R_{RS,LS}=\dfrac{\Delta\mu_{LS}}{eJ_{RS}}=\dfrac{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}{2eD}.
+\end{align}
