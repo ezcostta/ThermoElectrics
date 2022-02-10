@@ -686,6 +686,7 @@ R_{RS,RS}=
 \mathcal{L}^{QP}_{LS,\mu}}{2eD}.
 \end{align}
 
+\subsubsection{Eq. (C4)}
 
 In order to derive the last three equations of appendix B, we consider the superconducting electrode to be floating ($J_{S}=0$) and denote $J_{R}=-J_{L}=J_{RL}$. 
 
@@ -931,7 +932,7 @@ Let's divide by $-1/2$ both side of equation above, which allows us to write:
 \end{multline}
 
 Once again we define the denominator $D$ as,
-\begin{align}\label{D:definition}
+\begin{align}\nonumber
 D=\mathcal{L}_{LR,\mu}^{ET}
 (2\mathcal{L}_{LR,\mu}^{CAR}
 +
@@ -946,7 +947,7 @@ D=\mathcal{L}_{LR,\mu}^{ET}
 \mathcal{L}_{LL,\mu}^{DAR}
 )
 +2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}
-\\
+\\\label{D:definition}
 \dfrac{1}{2}\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}
 +\dfrac{1}{2}
 \mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
@@ -969,12 +970,141 @@ which allows us to write Eq. \eqref{JRL:exp1} as follows:
 \end{align}
 
 By using Eq. \eqref{JRL:exp2}, we can write $R_{RL,LS}$, we obtain:
-\begin{align}
+\begin{align}\label{RRLLS:exp_def}
 R_{RL,LS}=\dfrac{\Delta\mu_{LS}}{eJ_{RL}}
 =
 -\dfrac{\mathcal{L}_{LR,\mu}^{CAR}
 +
 \mathcal{L}_{RR,\mu}^{DAR}
 +
-\mathcal{L}^{QP}_{RS,\mu}/2}{eD}.
+\mathcal{L}^{QP}_{RS,\mu}/2}{eD},
+\end{align}
+where we have used $\delta\mu_{L}=\delta\mu_{L}-\delta\mu_{S}=\Delta\mu_{LS}$.
+
+\subsubsection{Eq.~(C6)}
+Next, we determine $R_{RL,RS}$ which may be obtained by using the expression,
+\begin{align*}
+\delta\mu_{R}=\Delta\mu_{RS}
+=-\dfrac{(2\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu})}{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}.
+\end{align*}
+and we notice that $\Delta\mu_{RS}=\delta\mu_{R}-\delta\mu_{S}$, since $\delta\mu_{S}=0$.
+
+In this way, by dividing Eq. \eqref{JRL:exp2} by $\Delta\mu_{RS}$ we obtain:
+\begin{align*}
+R_{RL,RS}
+=
+\dfrac{\Delta\mu_{RS}}{eJ_{RL}}
+=
+-\dfrac{(2\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu})}{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}\left[-\dfrac{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}{2eD\delta\mu_{L}}\right]
+\end{align*}
+
+\begin{align}\label{RRLRS:def}
+R_{RL,RS}
+=
+\dfrac{\Delta\mu_{RS}}{eJ_{RL}}
+=
+\dfrac{(2\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu})}{2eD},
+\end{align}
+which is Eq. (C5) of the paper.
+
+\subsubsection{Eq. (C7)}
+
+The last equation of appendix C is obtained first through the calculation of $\Delta\mu_{LR}$, in this way, we have:
+\begin{align*}
+\Delta\mu_{LR}=\delta\mu_{L}-\delta\mu_{R}
+\end{align*}
+\begin{align*}
+\Delta\mu_{LR}=\delta\mu_{L}-\left[-\dfrac{(2\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu})}{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}\right]
+\end{align*}
+\begin{align*}
+\Delta\mu_{LR}=\delta\mu_{L}-\left[-\dfrac{(2\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu})}{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}\right]
+\end{align*}
+\begin{align*}
+\dfrac{\Delta\mu_{LR}}{\delta\mu_{L}}=1+\dfrac{2\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu}}{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}
+\end{align*}
+
+\begin{align*}
+\Delta\mu_{LR}=\dfrac{(4\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+2\mathcal{L}_{RR,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})}
+{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}
+\end{align*}
+and by noticing that $\Delta\mu_{RL}=-\Delta\mu_{LR}$, we have:
+\begin{align*}
+\Delta\mu_{RL}=-\dfrac{(4\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+2\mathcal{L}_{RR,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})}
+{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}
+\end{align*}
+Next, we divide Eq. \eqref{JRL:exp2} by this expression, thus we have:
+\begin{align*}
+\dfrac{\Delta\mu_{RL}}{eJ_{RL}}
+=-\dfrac{(4\mathcal{L}_{LR,\mu}^{CAR}+
+2\mathcal{L}_{LL,\mu}^{DAR}+
+2\mathcal{L}_{RR,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})}
+{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}\delta\mu_{L}
+\left[-\dfrac{2\mathcal{L}_{LR,\mu}^{CAR}
++
+2\mathcal{L}_{RR,\mu}^{DAR}
++
+\mathcal{L}^{QP}_{RS,\mu}}{2eD\delta\mu_{L}}\right],
+\end{align*}
+then we obtain eq. (C7):
+\begin{align}\label{RRLRL:def}
+    R_{RL,RL}=\dfrac{\Delta\mu_{RL}}{eJ_{RL}}
+=
+\dfrac{\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{LR,\mu}^{CAR}+
+\mathcal{L}_{RR,\mu}^{DAR}+
+\mathcal{L}^{QP}_{LS,\mu}/2+\mathcal{L}^{QP}_{RS,\mu}/2}{eD}.
 \end{align}

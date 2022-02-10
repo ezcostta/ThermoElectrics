@@ -1,0 +1,371 @@
+\section{Appendix D}
+
+Next, we move forward to determine the equations appearing in Appendix D in the paper, the currents for nonisothermal conditions. We still consider the more general case in which the quaisparticles is included.
+
+\subsection{Equations (D1), (D2) and (D3)}
+For equations (D1), (D2) and (D3) the electrode $L$ is taken as the probe. By using Eq. \eqref{JL:general:new},
+\begin{multline*}
+J_{L}=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})+
+\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}+\delta\mu_{R}\right)
++
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})(\delta T_{L}-\delta T_{R})
++
+2\mathcal{L}_{LL,\mu}^{DAR}\delta\mu_{L}
+\\+
+\mathcal{L}^{QP}_{LS,\mu}(\delta\mu_{L}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{LS,T}(\delta T_{L}-\delta T_{S}).
+\end{multline*}
+
+By setting $J_{L}=0$, $\Delta T_{LS}=\delta T_{L}-\delta T_{S}$, $\Delta T_{LR}=\delta T_{L}-\delta T_{R}$, $\delta\mu_{S}=0$, we obtain:
+\begin{multline*}
+0=
+\mathcal{L}_{LR,\mu}^{ET}(\delta\mu_{L}-\delta\mu_{R})+
+\mathcal{L}_{LR,\mu}^{CAR}\left(\delta\mu_{L}+\delta\mu_{R}\right)
++
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\delta\mu_{L}
+\\+
+\mathcal{L}^{QP}_{LS,\mu}\delta\mu_{L}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS},
+\end{multline*}
+and by grouping the similar terms we have:
+\begin{multline*}
+0=
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})\delta\mu_{L}
++
+(\mathcal{L}_{LR,\mu}^{CAR}-\mathcal{L}_{LR,\mu}^{ET})\delta\mu_{R}
+\\+
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS},
+\end{multline*}
+which allows us express $\delta\mu_{R}$ in terms of $\delta\mu_{L}$ and the temperature differences. Thus, we have:
+\begin{multline*}
+\delta\mu_{R}=\dfrac{
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})\delta\mu_{L}
++
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}},
+\end{multline*}
+and it is convenient to split the chemical and thermal differences, so we have:
+\begin{multline}\label{deltamuR:D1}
+\delta\mu_{R}=\dfrac{
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\delta\mu_{L}
++
+\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}
+\end{multline}
+where we have exchanged the order of the terms in the denominator to get ride of the minus signal. 
+
+
+\subsubsection{Eq. (D1)}
+
+The current $J_{RS}$ is given by Eq. \eqref{JR:general},
+\begin{multline*}
+J_{RS}=
+\mathcal{L}_{RL,\mu}^{ET}(\delta\mu_{R}-\delta\mu_{L})+
+\mathcal{L}_{RL,\mu}^{CAR}\left(\delta\mu_{R}+\delta\mu_{L}\right)
++
+(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})(\delta T_{R}-\delta T_{L})
++
+2\mathcal{L}_{RR,\mu}^{DAR}\delta\mu_{R}
+\\+
+\mathcal{L}^{QP}_{RS,\mu}(\delta\mu_{R}-\delta\mu_{S})
++
+\mathcal{L}^{QP}_{RS,T}(\delta T_{R}-\delta T_{S}).
+\end{multline*}
+which may be written as follows:
+\begin{multline*}
+J_{RS}=
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})\delta\mu_{R}
++
+(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})\delta\mu_{L}
+\\+
+(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})\Delta T_{RL}
++
+\mathcal{L}^{QP}_{RS,T}\Delta T_{RS}.
+\end{multline*}
+
+Next, we substitute the expression for $\delta\mu_{R}$ which leads to
+\begin{multline*}
+J_{RS}=
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+\left[\dfrac{
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\delta\mu_{L}
+\right.\\\left.+
+\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right]
++
+(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})\delta\mu_{L}
+\\+
+(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})\Delta T_{RL}
++
+\mathcal{L}^{QP}_{RS,T}\Delta T_{RS},
+\end{multline*}
+which may be written as follows:
+\begin{multline*}
+J_{RS}=
+\dfrac{
+    (\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+    (\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\delta\mu_{L}+
+(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})\delta\mu_{L}
+\\+
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+\left[\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right]
+\\+
+(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})\Delta T_{RL}
++
+\mathcal{L}^{QP}_{RS,T}\Delta T_{RS},
+\end{multline*}
+and putting all the terms of common denominator, 
+\begin{multline}\label{JRSD1:intermed:eq1}
+J_{RS}=\left[
+\dfrac{
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+-(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})^{2}
+}
+{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right]\delta\mu_{L}
+\\+
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+\left[\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right]
+\\+
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\left[\dfrac{(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})\Delta T_{RL}
++
+\mathcal{L}^{QP}_{RS,T}\Delta T_{RS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right].
+\end{multline}
+
+The numerator appearing in Eq. \eqref{JRSD1:intermed:eq1} may be expressed as follows:
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+-(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})^{2}
+\\=
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})^{2}
+-
+(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})^{2}
+\\+
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
+(2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
++
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
+(2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+\\+
+(2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+\end{multline*}
+which leads to 
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+-(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})^{2}
+\\=
+4\mathcal{L}_{LR,\mu}^{ET}\mathcal{L}_{LR,\mu}^{CAR}
++
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
+(2\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{RR,\mu}^{DAR})
+\\+
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
+(\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})
++
+(2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+\end{multline*}
+and with some algebra we write,
+\begin{multline*}
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+-(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})^{2}
+\\=
+\mathcal{L}_{LR,\mu}^{ET}
+(2\mathcal{L}_{LL,\mu}^{DAR}+4\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR})
++
+\mathcal{L}_{LR,\mu}^{CAR}
+(2\mathcal{L}_{LL,\mu}^{DAR}+2\mathcal{L}_{RR,\mu}^{DAR})
++
+4\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}_{RR,\mu}^{DAR}
+\\+
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR})
+(\mathcal{L}^{QP}_{LS,\mu}+\mathcal{L}^{QP}_{RS,\mu})
++
+2\mathcal{L}_{RR,\mu}^{DAR}\mathcal{L}^{QP}_{LS,\mu}
++
+2\mathcal{L}_{LL,\mu}^{DAR}\mathcal{L}^{QP}_{RS,\mu}
++
+\mathcal{L}^{QP}_{LS,\mu}\mathcal{L}^{QP}_{RS,\mu}
+\end{multline*}
+and by comparing this expression, we see the right hand side is equal to Eq. \eqref{D:definition} multiplied by 2. In this way, we write:
+\begin{align*}
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+-(\mathcal{L}_{RL,\mu}^{CAR}-\mathcal{L}_{RL,\mu}^{ET})^{2}
+=2D.
+\end{align*}
+
+By substituting the expression above into Eq. \eqref{JRSD1:intermed:eq1}
+\begin{multline}\label{JRSD1:intermed:eq2}
+J_{RS}=\left[
+\dfrac{
+2D
+}
+{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right]\delta\mu_{L}
+\\+
+(\mathcal{L}_{RL,\mu}^{ET}+\mathcal{L}_{RL,\mu}^{CAR}+2\mathcal{L}_{RR,\mu}^{DAR}+\mathcal{L}^{QP}_{RS,\mu})
+\left[\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right]
+\\+
+(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})\left[\dfrac{(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})\Delta T_{RL}
++
+\mathcal{L}^{QP}_{RS,T}\Delta T_{RS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\right],
+\end{multline}
+
+Eq. \eqref{JRSD1:intermed:eq2} can be written in a more compact form by using the set of equations of appendix C. In fact, we have:
+\begin{align*}
+\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}
+&=
+2eDR_{RS,RS}
+\\
+\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}=2eDR_{RS,LS}
+\end{align*}
+which allows us to write, 
+\begin{align*}
+\dfrac{\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}
+=
+\dfrac{2eDR_{RS,RS}}{2eDR_{RS,LS}}
+=
+\dfrac{R_{RS,RS}}{R_{RS,LS}}.
+\end{align*}
+and the first term of Eq. \eqref{JRSD1:intermed:eq2} is expressed in terms of $R_{RS,LS}$ as well. In fact, we write Eq. \eqref{JRSD1:intermed:eq2} as follows:
+\begin{multline*}
+J_{RS}=
+\dfrac{\delta\mu_{L}}{eR_{RS,LS}}
++
+\dfrac{R_{RS,RS}}{R_{RS,LS}}[
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}]
+\\+
+(\mathcal{L}_{RL,T}^{ET}+\mathcal{L}_{RL,T}^{CAR})\Delta T_{RL}
++
+\mathcal{L}^{QP}_{RS,T}\Delta T_{RS},
+\end{multline*}
+or
+\begin{align}\label{JRSD1:intermed:eq4}
+J_{RS}=
+\dfrac{\delta\mu_{L}}{eR_{RS,LS}}
++
+\left[\dfrac{R_{RS,RS}}{R_{RS,LS}}-1\right]
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\dfrac{R_{RS,RS}}{R_{RS,LS}}(\mathcal{L}^{QP}_{RS,T}\Delta T_{RS}+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}).
+\end{align}
+
+Next, we notice that 
+\begin{align*}
+R_{RS,RS}-R_{RS,LS}
+=\dfrac{\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}}{2eD}
+-\dfrac{(\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR})}{2eD}
+\end{align*}
+which leads to
+\begin{align*}
+R_{RS,RS}-R_{RS,LS}
+=\dfrac{2\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}}{2eD}
+=
+\dfrac{\mathcal{L}_{LR,\mu}^{CAR}+\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}/2}{eD}
+=
+R_{RL,RS}.
+\end{align*}
+
+Substituting this expression back into Eq. \eqref{JRSD1:intermed:eq4}
+\begin{align}\label{JRSD1:intermed:eq5}
+J_{RS}=
+\dfrac{\Delta\mu_{LS}}{eR_{RS,LS}}
++
+\dfrac{R_{RL,RS}}{R_{RS,LS}}
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\dfrac{R_{RS,RS}}{R_{RS,LS}}(\mathcal{L}^{QP}_{RS,T}\Delta T_{RS}+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}),
+\end{align}
+where we have used $\delta\mu_{S}=0$ such that $\Delta\mu_{LS}=\delta\mu_{L}-\delta\mu_{S}=\delta\mu_{L}$.
+
+\subsubsection{Eq. (D2)}
+
+Next, we proceed to demonstrate Eq. (D2). In this case, we start from Eq. \eqref{deltamuR:D1}
+\begin{multline*}
+\delta\mu_{R}=\dfrac{
+(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})
+}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}\delta\mu_{L}
++
+\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}
+\end{multline*}
+and express $\delta\mu_{L}$ in terms of $\delta\mu_{R}$. Thus, we have:
+\begin{align*}
+\delta\mu_{L}=\dfrac{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}{(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})}\delta\mu_{R}
+-
+\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}},
+\end{align*}
+and since $\delta\mu_{S}=0$, we can rewrite both $\delta\mu_{L}$ and $\delta\mu_{R}$ as $\Delta\mu_{L}$ and $\Delta\mu_{R}$, respectively, which leads to:
+\begin{align}\label{DeltamuLSRS}
+\Delta\mu_{LS}=\dfrac{\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}}{(\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu})}\Delta\mu_{RS}
+-
+\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}}.
+\end{align}
+
+Here it is convenient to rewrite Eq. \eqref{DeltamuLSRS} in terms of previous definitions:
+\begin{align*}
+\mathcal{L}_{LR,\mu}^{ET}+\mathcal{L}_{LR,\mu}^{CAR}+2\mathcal{L}_{LL,\mu}^{DAR}+\mathcal{L}^{QP}_{LS,\mu}
+&=
+2eDR_{RS,RS},
+\\
+\mathcal{L}_{LR,\mu}^{ET}-\mathcal{L}_{LR,\mu}^{CAR}=2eDR_{RS,LS,}
+\end{align*}
+which leads to
+\begin{align}\label{DeltamuLSRS2}
+\Delta\mu_{LS}=\dfrac{R_{RS,LS}}{R_{RS,RS}}\Delta\mu_{RS}
+-
+\dfrac{
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}}{2eDR_{RS,RS}}.
+\end{align}
+
+
+Substituting Eq. \eqref{DeltamuLSRS} into Eq. \eqref{JRSD1:intermed:eq5} we obtain,
+\begin{multline*}
+J_{RS}=
+\dfrac{\Delta\mu_{LS}}{eR_{RS,LS}}
++
+\dfrac{R_{RL,RS}}{R_{RS,LS}}
+(\mathcal{L}_{LR,T}^{ET}+\mathcal{L}_{LR,T}^{CAR})\Delta T_{LR}
++
+\dfrac{R_{RS,RS}}{R_{RS,LS}}(\mathcal{L}^{QP}_{RS,T}\Delta T_{RS}+\mathcal{L}^{QP}_{LS,T}\Delta T_{LS}),
+\end{multline*}
